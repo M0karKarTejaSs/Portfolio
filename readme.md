@@ -39,3 +39,27 @@ Summary of actions:
 Now, start committing on your feature. When done, use:
 
      git flow feature finish header
+
+ptspl03@NAGHOLT227:~/Documents/DEV/Projects/Portfolio$ git commit -m "feat: header navbar created. Closes #1"
+[feature/header ee393d5] feat: header navbar created. Closes #1
+ 3 files changed, 146 insertions(+)
+ create mode 100644 readme.md
+ create mode 100644 src/index.html
+ create mode 100644 styles/style.css
+
+
+ ptspl03@NAGHOLT227:~/Documents/DEV/Projects/Portfolio$ git remote add origin https://github.com/M0karKarTejaSs/Portfolio.git
+
+ptspl03@NAGHOLT227:~/Documents/DEV/Projects/Portfolio$ git push origin develop
+Enumerating objects: 2, done.
+Counting objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 165 bytes | 165.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: 
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/M0karKarTejaSs/Portfolio/pull/new/develop
+remote: 
+To https://github.com/M0karKarTejaSs/Portfolio.git
+ * [new branch]      develop -> develop
+
+ 
