@@ -1,30 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio.</title>
-  <link rel="stylesheet" href="../styles/style.css">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.</title>
+    <link rel="stylesheet" href="../styles/style.css">
+
 </head>
+
 <body>
     <header>
-      <div class="logo">My Portfolio</div>
-      <nav>
-        <span class="menu-toggle">&#9776;</span>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-        </ul>
-      </nav>
+        <div class="logo">My Portfolio</div>
+        <nav>
+            <span class="menu-toggle">&#9776;</span>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </nav>
     </header>
-  
+    <div class="portfolio-body">
+        <section id="about-me">
+            <h2>About Me</h2>
+            <p>Hi, I'm Tejas Mokarkar, a passionate software developer with a keen eye for design and problem-solving. I
+                specialize in back-end development and enjoy working on challenging projects that help me grow my
+                skills.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">Java</div>
+                <div class="skill-item">JavaScript</div>
+                <div class="skill-item">React</div>
+                <div class="skill-item">Node.js</div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Project 1: Web App</h3>
+                <p>Dummy app.</p>
+            </div>
+            <div class="project">
+                <h3>Project 2: Portfolio Site</h3>
+                <p>Dummy.</p>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>If you'd like to work with me or just want to say hello, feel free to reach out!</p>
+            <ul>
+                <li>Email: tejas.mokarkar@pinnacle.in</li>
+                <li>LinkedIn: https://in.linkedin.com/in/tejas-mokarkar?trk=public_profile_browsemap</li>
+                <li>GitHub: https://github.com/M0karKarTejaSs</li>
+            </ul>
+        </section>
+    </div>
+
+
     <script>
-      document.querySelector('.menu-toggle').addEventListener('click', () => {
-        document.querySelector('nav ul').classList.toggle('active');
-      });
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
     </script>
-  </body>
-  
+</body>
+
 </html>
