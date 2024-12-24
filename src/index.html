@@ -4,25 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio.</title>
+    <title>Tejas Mokarkar | Portfolio</title>
     <link rel="stylesheet" href="../styles/style.css">
-
 </head>
 
 <body>
     <header>
-        <div class="logo">My Portfolio</div>
+        <!-- <div class="logo">Tejas Mokarkar</div> -->
+        <div class="logo" id="logo"></div>
+
         <nav>
             <span class="menu-toggle">&#9776;</span>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div class="portfolio-body">
-        <section id="about-me">
+
+    <main class="portfolio-body">
+        <section id="about">
             <h2>About Me</h2>
             <p>Hi, I'm Tejas Mokarkar, a passionate software developer with a keen eye for design and problem-solving. I
                 specialize in back-end development and enjoy working on challenging projects that help me grow my
@@ -56,17 +59,30 @@
             <p>If you'd like to work with me or just want to say hello, feel free to reach out!</p>
             <ul>
                 <li>Email: tejas.mokarkar@pinnacle.in</li>
-                <li>LinkedIn: https://in.linkedin.com/in/tejas-mokarkar?trk=public_profile_browsemap</li>
-                <li>GitHub: https://github.com/M0karKarTejaSs</li>
+                <li>LinkedIn: <a href="https://in.linkedin.com/in/tejas-mokarkar?trk=public_profile_browsemap"
+                        target="_blank">Tejas Mokarkar</a></li>
+                <li>GitHub: <a href="https://github.com/M0karKarTejaSs" target="_blank">M0karKarTejaSs</a></li>
             </ul>
         </section>
-    </div>
-
+    </main>
 
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', () => {
             document.querySelector('nav ul').classList.toggle('active');
         });
+        let i=0;
+        let name = 'Tejas Mokarkar';
+
+        function typeWriter(){
+            if(i < name.length){
+                document.getElementById("logo").innerHTML += name.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+        
+
     </script>
 </body>
 

@@ -120,13 +120,17 @@ git flow init
 
 git flow feature start header (git checkout -b feature/body)
 
+--------------------------Common Steps-------------------------------
+
+git checkout -b feature/body
+
 git add .
 
 git commit -m "feat: header navbar created. Closes #1"
 
-git push origin develop
-
 git push origin feature/header
+
+git push origin develop
 
 git checkout develop
 
@@ -136,4 +140,4 @@ git merge feature/header
 
 git push origin develop
 
-
+--------------------------Common Steps-------------------------------
