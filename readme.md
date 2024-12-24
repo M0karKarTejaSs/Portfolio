@@ -130,8 +130,6 @@ git commit -m "feat: header navbar created. Closes #1"
 
 git push origin feature/header
 
-git push origin develop
-
 git checkout develop
 
 git pull origin develop

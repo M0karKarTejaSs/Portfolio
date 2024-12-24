@@ -4,77 +4,102 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     font-family: 'Arial', sans-serif;
 }
 
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+}
 
 #logo {
     font-size: 1.8em;
     font-weight: bold;
-    display: inline-block;
-    border-right: 3px solid #fff;
+    /* border-right: 3px solid #fff; */
     padding-right: 5px;
     white-space: nowrap;
 }
 
-
-body {
-    background-color: #f8f9fa;
-    color: #333;
-}
-
-
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #1f1f1f;
     position: fixed;
     top: 0;
-    left: 0;
     width: 100%;
-    background-color: #007bff;
-    color: white;
-    padding: 20px;
     z-index: 1000;
+    padding-bottom: 30px;
 }
 
 header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
+    flex-shrink: 0;
 }
 
 header nav {
-    position: relative;
-}
-
-header nav ul {
-    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
-    justify-content: flex-end;
     gap: 20px;
 }
 
-header nav ul li {
-    display: inline;
-}
-
-header nav ul li a {
+header nav a {
     color: white;
     text-decoration: none;
     font-size: 1.1em;
+    padding: 5px 10px;
+    transition: color 0.3s;
 }
 
-header .menu-toggle {
-    display: none;
-    font-size: 2em;
+header nav a:hover {
+    color: #007bff;
+}
+
+.theme-toggle-btn {
+    position: fixed; /* Fixed position relative to the viewport */
+    top: 20px; /* Distance from the top of the viewport */
+    right: 20px; /* Distance from the right edge of the viewport */
+    background-color: #007bff;
+    color: white;
+    padding: 3px 13px;
+    border: none;
+    border-radius: 25px;
     cursor: pointer;
+    font-size: 1em;
+    z-index: 1001; /* Ensures it stays on top of other elements */
+    transition: background-color 0.3s ease;
 }
 
+.theme-toggle-btn:hover {
+    background-color: #0056b3;
+}
+
+body.light-theme {
+    background-color: #ffffff;
+    color: #333;
+}
+
+header.light-theme {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+header.light-theme nav a {
+    color: #007bff;
+}
+
+header.light-theme nav a:hover {
+    color: #0056b3;
+}
 
 .portfolio-body {
-    padding-top: 80px;
-    margin: 0 auto;
+    padding-top: 120px;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 section {
@@ -84,17 +109,25 @@ section {
 }
 
 h2 {
-    color: #333;
     margin-bottom: 20px;
     font-size: 2em;
     text-transform: uppercase;
+    color: #e0e0e0;
+}
+
+h2.light-theme {
+    color: #333;
 }
 
 p {
-    color: #666;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+    color: #e0e0e0;
+}
+
+p.light-theme {
+    color: #666;
 }
 
 .skills-list {
@@ -111,18 +144,34 @@ p {
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.skill-item:hover {
+    background-color: #0056b3;
 }
 
 .project {
-    background-color: #fff;
+    background-color: #1f1f1f;
     padding: 20px;
     margin-top: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    background-color: #292929;
 }
 
 .project h3 {
     color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: #e0e0e0;
 }
 
 ul {
@@ -133,34 +182,26 @@ ul {
 
 ul li {
     margin-bottom: 10px;
+    color: #e0e0e0;
 }
 
 ul li a {
     color: #007bff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
+ul li a:hover {
+    color: #0056b3;
+}
 
 @media (max-width: 768px) {
-    header nav ul {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        background-color: #007bff;
-        padding: 20px;
-        border-radius: 8px;
+    header nav {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    header .menu-toggle {
-        display: block;
-    }
-
-    header nav ul.active {
-        display: block;
-    }
-
-    header nav ul li {
-        margin-bottom: 10px;
+    .portfolio-body {
+        padding-top: 140px;
     }
 }
