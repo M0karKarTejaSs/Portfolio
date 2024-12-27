@@ -205,3 +205,10 @@ ul li a:hover {
         padding-top: 140px;
     }
 }
+
+fieldset {
+    height: 80px;
+    border-radius: 15px;
+    border-color: cornflowerblue;
+    padding: 4px;
+}
